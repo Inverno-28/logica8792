@@ -1,41 +1,18 @@
 #include <stdio.h>
-<<<<<<< HEAD
 #include<locale.h>
 
 int main(){
 
 setlocale (LC_ALL, "pt_BR.UTF-8");
 
-float valor, cotação;
+float raio;
+const float PI = 3.14159;
 
-printf("digite o valor em reais: ");
-scanf("%f",&valor);
+printf("digite o raio do circulo ");
+scanf("%f", &raio);
 
-printf("digite o valor em dolar: ");
-scanf("%f", &cotação);
-
-printf("valor em dolares: %2f\n", valor / cotação);
+printf("area: %.2f\n", PI * raio * raio);
+printf("perimetro %.2f\n", 2 * PI * raio);
 
     return 0;
 }
-=======
-#include <windows.h>
-
-int main(){
-
-    
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
-
-
-    int n;
-
-    printf("Digite um número: ");
-    scanf("%d", &n);
-
-    printf("Antecessor: %d\n", n - 1);
-    printf("Sucessor: %d\n", n + 1);
-    
-    return 0;
-}
->>>>>>> b020ed07432c8d21051160e35812ccef11e73369
