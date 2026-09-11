@@ -1,26 +1,20 @@
 #include <stdio.h>
-#include <locale.h>
+#include <windows.h>
 
 int main(){
 
-    setlocale(LC_ALL, "pt_BR.UTF-8");
-
-    int a;
-    int b;
-
-    printf("digite a: ");
-        scanf ("%d",&a);
-  
-    printf("digite a: ");
-        scanf ("%d",&b);
-
-    printf("A soma dos numero é: %d\n", (a + b));
-
-    printf("A subtrção dos numero é: %d\n", (a - b));
     
-    printf("A multiplicação dos numeros é: %d\n", (a * b));
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
 
-    printf("A divisão dos numeros é: %.2f\n", (float)a / b);
+
+    int n;
+
+    printf("Digite um número: ");
+    scanf("%d", &n);
+
+    printf("Antecessor: %d\n", n - 1);
+    printf("Sucessor: %d\n", n + 1);
     
     return 0;
 }
