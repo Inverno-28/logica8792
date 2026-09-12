@@ -3,17 +3,17 @@
 
 int main(){
 
-int segundos, horas, minutos, resto;
+    int n;
 
-printf("digite a quantidade de segundos: ");
-scanf ("%d", &segundos);
+    printf("digite um numero: ");
+    scanf("%d", &n);
 
-horas = segundos /3600;
-minutos = (segundos % 3600) /60;
-resto = segundos % 60;
+if (n>0){
+    printf("positivo\n");
+}else{
+    printf("negativo\n");
+}
 
-printf("%d horas, %d minutos e %d segundos\n", horas, minutos, resto);
-    
+
     return 0;
-    //para comitar
 }
