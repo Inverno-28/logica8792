@@ -15,4 +15,5 @@ printf("area: %.2f\n", PI * raio * raio);
 printf("perimetro %.2f\n", 2 * PI * raio);
 
     return 0;
+    //so para comitar
 }
