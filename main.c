@@ -3,13 +3,16 @@
 
 int main(){
 
-float celsius, fahrenheit;
+int segundos, horas, minutos, resto;
 
-printf("digite a temperatura em celsius: ");
-scanf("%f", &celsius);
+printf("digite a quantidade de segundos: ");
+scanf ("%d", &segundos);
 
-fahrenheit = (celsius * 9.0 / 5.0) + 32;
-printf("fahrenheit: %.2f\n", fahrenheit);
+horas = segundos /3600;
+minutos = (segundos % 3600) /60;
+resto = segundos % 60;
+
+printf("%d horas, %d minutos e %d segundos\n", horas, minutos, resto);
     
     return 0;
 }
