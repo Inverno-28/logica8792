@@ -15,4 +15,5 @@ resto = segundos % 60;
 printf("%d horas, %d minutos e %d segundos\n", horas, minutos, resto);
     
     return 0;
+    //para comitar
 }
