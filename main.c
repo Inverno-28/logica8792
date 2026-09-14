@@ -17,7 +17,10 @@ if (idade >= 50){
 }else if (idade >= 9){
     printf("pre-adolecente");
 }else{
-    printf("criança");}
+    printf("crianca");}
+
+
+printf("%s", idade >= 50 ? "senior" : idade >= 18 ? "maior de idade" : idade >= 12 ? "adolescente" : idade >= 9 ? "pre-adolecente" : "crianca");
 
     return 0;
 }
