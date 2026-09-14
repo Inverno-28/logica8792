@@ -6,14 +6,9 @@ int main(){
     int n;
 
     printf("digite um numero: ");
-    scanf("%d", &n);
+    scanf("%d",&n);
 
-if (n>0){
-    printf("positivo\n");
-}else{
-    printf("negativo\n");
-}
-
+    printf("%s", n > 0 ? "positivo" : (n < 0 ? "negativo" : "zero"));
 
     return 0;
 }
