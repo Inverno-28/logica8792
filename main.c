@@ -3,15 +3,19 @@
 
 int main(){
 
-    int a,b;
+    int idade;
+    float altura;
 
-    printf("digite dois numeros: ");
-    scanf("%d %d", &a, &b);
+    printf("Bem-vindos ao brinquedo roleta da morte!");
+    printf("\n qual sua idade?");
+    scanf("%d", &idade);
+    printf("\n qual sua altura");
+    scanf("%f", &altura);
 
-    if(a != b){
-        printf("os numeros sao diferentes: \n");
+    if((idade >= 18) && (altura >= 1.60)){
+        printf("voce pode brincar na roleta!");
     }else{
-        printf("os numeros sao iguais: \n");
+        printf("voce nao pode brincar na roleta!");
     }
 
     return 0;
