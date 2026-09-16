@@ -34,7 +34,7 @@ switch(dia){
         printf("sabado");
         break;
     default:
-        printf("numero invalido")
+        printf("numero invalido");
 }
 
 
