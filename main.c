@@ -33,7 +33,10 @@ switch(dia){
     case 7:
         printf("sabado");
         break;
+    default:
+        printf("numero invalido")
 }
+
 
 
     return 0;
