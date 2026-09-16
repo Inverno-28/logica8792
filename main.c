@@ -6,27 +6,33 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int diaDaSemana;
+int dia;
 
 printf("digite um numero de (1a7):");
-scanf("%d", &diaDaSemana);
+scanf("%d", &dia);
 
-if(diaDaSemana==1){
-    printf("domingo");}
-    else if (diaDaSemana == 2){
-    printf("segunda-feira");
-}else if (diaDaSemana == 3){
-    printf("terça-feira");
-}else if (diaDaSemana == 4){
-    printf("quarta-feira");
-}else if (diaDaSemana == 5){
-    printf("quinta-feira");
-}else if (diaDaSemana == 6){
-    printf("sexta-feira");
-}else if (diaDaSemana == 7){
-    printf("sabado");
-}else {
-    printf("valor invalido");
+switch(dia){
+    case 1:
+        printf("domingo");
+        break;
+    case 2:
+        printf("segunda");
+        break;
+    case 3:
+        printf("terça");
+        break;
+    case 4:
+        printf("quarta");
+        break;
+    case 5:
+        printf("quinta");
+        break;
+    case 6:
+        printf("sexta");
+        break;
+    case 7:
+        printf("sabado");
+        break;
 }
 
 
