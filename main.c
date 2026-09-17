@@ -6,37 +6,21 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int dia;
+int n1,n2,n3;
+float media;
 
-printf("digite um numero de (1a7):");
-scanf("%d", &dia);
+printf("digite 3 notas:");
+scanf("%d %d %d", &n1,&n2,&n3);
 
-switch(dia){
-    case 1:
-        printf("domingo");
-        break;
-    case 2:
-        printf("segunda");
-        break;
-    case 3:
-        printf("terça");
-        break;
-    case 4:
-        printf("quarta");
-        break;
-    case 5:
-        printf("quinta");
-        break;
-    case 6:
-        printf("sexta");
-        break;
-    case 7:
-        printf("sabado");
-        break;
-    default:
-        printf("numero invalido");
+media = (n1+n2+n3)/3;
+
+if(media >= 7){
+    printf("aprovado %d", media);
+}else if (media >= 5){
+    printf("recuperação %d", media);
+}else{
+    printf ("reprovado %d", media);
 }
-
 
 
     return 0;
