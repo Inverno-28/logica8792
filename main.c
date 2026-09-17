@@ -6,20 +6,17 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n1,n2,n3;
-float media;
+float a, b, c;
 
-printf("digite 3 notas:");
-scanf("%d %d %d", &n1,&n2,&n3);
+printf("digite os tres lados do triangulo: ");
+scanf("%f %f %f", &a, &b, &c);
 
-media = (n1+n2+n3)/3;
-
-if(media >= 7){
-    printf("aprovado %d", media);
-}else if (media >= 5){
-    printf("recuperação %d", media);
+if(a == b && b == c){
+    printf("equilatero\n");
+}else if (a==b || a==c || b==c){
+    printf("isoceles\n");
 }else{
-    printf ("reprovado %d", media);
+    printf("escaleto\n");
 }
 
 
