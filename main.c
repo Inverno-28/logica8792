@@ -6,19 +6,35 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-float a, b, c;
+int opcao;
 
-printf("digite os tres lados do triangulo: ");
-scanf("%f %f %f", &a, &b, &c);
+printf("--- SISTEMA DE PEDAGIO ---\n");
+printf("1 - moto\n");
+printf("2 - carro passeio\n");
+scanf("%d", &opcao);
 
-if(a == b && b == c){
-    printf("equilatero\n");
-}else if (a==b || a==c || b==c){
-    printf("isoceles\n");
-}else{
-    printf("escaleto\n");
+switch (opcao)
+{
+case 1:
+    printf("categotia: Moto | tarida R$ 5,00\n");
+    break;
+case 2:
+    printf("Categoria: carro passeio | tarifa R$ 10,00\n");
+    break;
+default:
+    printf("erro opcao invalida");
+    break;
 }
 
+//quero dormirrrrrrrrrr
+//zzzzzzzzzzzzzzzzzzzzz
+//zzzzzzzzzzzzzzzzzzzzz
+//zzzzzzzzzzzzzzzzzzzzz
+//zzzzzzzzzzzzzzzzzzzzz
+//zzzzzzzzzzzzzzzzzzzzz
+//zzzzzzzzzzzzzzzzzzzzz
+//zzzzzzzzzzzzzzzzzzzzz
+//zzzzzzzzzzzzzzzzzzzzz
 
     return 0;
 }
