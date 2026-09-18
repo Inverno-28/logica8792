@@ -6,19 +6,33 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-float n1,n2,n3,media;
+int opcao;
 
-printf("digite 3 notas:");
-scanf("%f %f %f", &n1,&n2,&n3);
+printf("--- SISTEMA DE PEDAGIO ---\n");
+printf("1 - moto\n");
+printf("2 - carro passeio\n");
+printf("3 - caminhao\n");
+printf("4 - onibus\n");
+scanf("%d", &opcao);
 
-media = (n1+n2+n3)/3;
+switch (opcao)
+{
+case 1:
+    printf("categotia: Moto | tarida R$ 5,00\n");
+    break;
+case 2:
+    printf("Categoria: carro passeio | tarifa R$ 10,00\n");
+    break;
+case 3:
+    printf("Categoria: caminhao | tarifa: R$ 25,00\n");
+    break;
+case 4:
+    printf("Categoria: onibus | tarifa:R$ 30,00\n");
+    break;
+default:
+    printf("erro opcao invalida");
+    break;
 
-if(media >= 7){
-    printf("aprovado %.2f", media);
-}else if (media >= 5){
-    printf("recuperação %.2f", media);
-}else{
-    printf ("reprovado %.2f", media);
 }
 
 
