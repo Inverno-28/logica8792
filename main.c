@@ -6,18 +6,19 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-char l;
+int n;
+printf("digite um numero ");
+scanf("%d", &n);
 
-printf("digite uma letra: ");
-scanf("%c", &l);
-
-if (l == 'a' || l == 'e' || l == 'i' || l == 'o' || l == 'u' || 
-    l == 'A' || l == 'E' || l == 'I' || l == 'O' || l == 'A'){
-        printf("vogal\n");
-    }else{
-        printf("consoante\n");
+if (n%3==0 && n%5==0){
+    printf("multiplo de 3 e 5\n");
+}else if (n%3==0){
+    printf("multiplo de 3\n");
+}else if (n%5==0){
+    printf("multiplo de 5\n");
 }
-
-
+else{
+    printf("não é multiplo de 3 nem de 5\n ");
+}
     return 0;
 }
