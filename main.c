@@ -6,19 +6,34 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n;
-printf("digite um numero ");
-scanf("%d", &n);
+float peso, altura, imc;
 
-if (n%3==0 && n%5==0){
-    printf("multiplo de 3 e 5\n");
-}else if (n%3==0){
-    printf("multiplo de 3\n");
-}else if (n%5==0){
-    printf("multiplo de 5\n");
+printf("digite seu peso (KG): ");
+scanf("%f", &peso);
+
+printf("digite sau altura (m): ");
+scanf("%f", &altura);
+
+imc = peso / (altura * altura);
+
+if(imc<18.5){
+    printf("seu peso é; %.2f\n", peso);
+    printf("sua altura é; %.2f\n", altura);
+    printf("classificação; abaixo do peso!\n");
+}else if (imc<25){
+    printf("seu peso é; %.2f\n", peso);
+    printf("sua altura é; %.2f\n", altura);
+    printf("peso normal");
+}else if (imc<30){
+    printf("seu peso é; %.2f\n", peso);
+    printf("sua altura é; %.2f\n", altura);
+    printf("sobre peso");
+}else{
+    printf("seu peso é; %.2f\n", peso);
+    printf("sua altura é; %.2f\n", altura);
+    printf("obseidade");
 }
-else{
-    printf("não é multiplo de 3 nem de 5\n ");
-}
-    return 0;
+
+return 0;
+
 }
