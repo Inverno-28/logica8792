@@ -6,11 +6,11 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-for(int i = 1; i <= 10000; i++){
-    printf("%d\n", i);
+for(int i = 0; i < 10000; i++){
+    printf("%s %d", "\nOs numeros estao aumentando: ---->", i);
 }
 
-    printf("boooooommm");
+    printf("\nmeu for funfo");
 
 return 0;
 
