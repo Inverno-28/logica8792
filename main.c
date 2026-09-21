@@ -6,14 +6,23 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-char nomes[5][20] = {"beijamin", "adelino", "fotocopia", "jocelino", "altair"};
+int numerosInteiros[5] = {1, 5, 10, 15, 20};
+float numerosFloats[5] = {10.5, 20.8, 30.2, 40.9, 50.1};
+char guitarra[3][20] = {"Les Paul", "StratoCaster", "Fly V"};
 
-    printf("%s", nomes[0]);
-    printf("\n%s", nomes[1]);
-    printf("\n%s", nomes[2]);
-    printf("\n%s", nomes[3]);
-    printf("\n%s", nomes[4]);
-    
+for (int i = 0; i < 5; i++){
+    printf ("%d\n", numerosInteiros[i]);}
+
+printf("\n");
+
+for (int j = 0; j < 5; j++){
+    printf ("%.2f\n", numerosFloats[j]);}
+
+printf("\n");
+
+for (int k = 0; k < 3; k++){
+    printf ("%s\n", guitarra[k]);}
+ 
 return 0;
 
 }
