@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <windows.h>
 
-void saudar(){
-   printf ("ola mundo\n");
-    printf ("n to entendendo ndaaaaaa\n");
+void saudar(const char *nome){
+   printf ("ola  %S\n", nome);
 }
 
 int main(){
@@ -11,7 +10,12 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-saudar(1);
+const char nome;
+
+printf ("nome %s", nome);
+scanf ("%s", nome);
+
+saudar(nome);
 
 return 0;
 
