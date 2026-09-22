@@ -6,21 +6,12 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int soma = 0;
-int i;
+int numeros[3];
 
-for(int i = 1; i <= 5; i++){
-    soma = soma + i;
-    //soma + i = resultado
-    //0 + 1 = 1
-    //1 + 2 = 3
-    //3 + 3 = 6
-    //6 + 4 = 10
-    //10 + 5 = 15
-}
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
 
-printf("soma é %d", soma);
-
-return 0;
+printf("%d", numeros[2]);
 
 }
