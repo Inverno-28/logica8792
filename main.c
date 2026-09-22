@@ -1,17 +1,15 @@
 #include <stdio.h>
 #include <windows.h>
 
-void saudar(const char *nome) {
-    printf("Ola %s\n", nome);
+int somar(int a, int b){
+    return a + b;
 }
 
 int main() {
 
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
+    int resultado = somar (5, 3);
 
-    saudar("daniel");
-    saudar("winter");
+    printf("resultado da soma é %d", resultado);
    
     return 0;
 }
