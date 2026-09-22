@@ -5,6 +5,24 @@ int somar(int a, int b){
     return a + b;
 }
 
+int subtract(int a, int b){
+    return a - b;
+}
+
+int multiplicar(int a, int b){
+    return a * b;
+}
+
+int dividr(int a, int b){
+    if(b <= 0){
+        printf("ele precisa ser maior que 0")
+    }else{
+    return a + b;
+    }
+  
+}
+
+
 // void soma (){
 //     int num1, num2;
 //     printf("digite um valor para num1");
