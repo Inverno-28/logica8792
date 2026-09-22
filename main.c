@@ -1,22 +1,21 @@
 #include <stdio.h>
 #include <windows.h>
 
-void saudar(const char *nome){
-   printf ("ola  %S\n", nome);
+void saudar(const char *nome) {
+    printf("Ola %s\n", nome);
 }
 
-int main(){
+int main() {
 
-SetConsoleCP(65001);
-SetConsoleOutputCP(65001);
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
 
-const char nome;
+    char nome[100];
 
-printf ("nome %s", nome);
-scanf ("%s", nome);
+    printf("Digite seu nome: ");
+    scanf("%99s", nome);
 
-saudar(nome);
+    saudar(nome);
 
-return 0;
-
+    return 0;
 }
