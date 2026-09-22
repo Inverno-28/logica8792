@@ -10,12 +10,8 @@ int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    char nome[100];
-
-    printf("Digite seu nome: ");
-    scanf("%99s", nome);
-
-    saudar(nome);
-
+    saudar("daniel");
+    saudar("winter");
+   
     return 0;
 }
