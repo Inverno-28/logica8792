@@ -1,28 +1,23 @@
 #include <stdio.h>
 #include <windows.h>
+#include <math.h>
+#include <string.h>
+
+int fatorial (int n){
+    int resultado = 1;
+    for(int i = 1; i <= n; i++){
+        resultado *= i; //resultado = resultado * i;
+    }
+    return resultado;
+}
 
 int main() {
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int horas [12];
-int minutos [60];
-
-for (int i = 0; i < 12; i++){
-    horas[i] = i + 1;
-}
-
-for(int j = 0; j < 60; j++){
-    minutos[j] = j;
-}
-
-for(int i = 0; i < 12; i++){
-    for(int j = 0; j < 60; j++){
-        printf("hora: %2d:%02d\n", horas[i], minutos[j]);
-    }
-}
- 
+int numero = 5;
+printf ("%d = %d", numero, fatorial(numero));
 
     return 0;
 }
