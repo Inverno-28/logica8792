@@ -7,12 +7,18 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int i = 1;
+int num1;
 
-while (i <= 5){
-    printf("%d\n", i);
-    i++;
+printf("digite um numero positivo: ");
+    scanf("%d", &num1);
+
+    while(num1 <= 0){
+    
+        printf("Numero Invalálido! digite novamente: ");
+            scanf("%d", &num1);
 }
+
+printf("Numero valido: %d\n", num1);
 
     return 0;
 }
