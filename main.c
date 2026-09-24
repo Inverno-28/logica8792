@@ -8,18 +8,17 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int num1 = 1;
+int n, soma = 0;
 
-while(num1 <= 50 ){
-    if(num1 % 2 == 0){
-        printf("%d\n", num1);
-    }
-    num1++;
+printf("digite um numero: ");
+scanf("%d",&n);
+
+for (int i = 1; i <= n; i++){
+   soma += i;
+   //soma = soma + i
 }
 
-// for(int i = 0; i <= 50; i += 2){
-//     printf("%d\n", i);
-// }
+printf("%d", soma);
 
     return 0;
 }
