@@ -8,17 +8,18 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int numero, soma = 0;
+int num1 = 1;
 
-printf("digite numero para somar (0 encerra): ");
-scanf("%d", &numero);
-
-while (numero != 0){
-    soma += numero;
-    scanf("%d", &numero);
-
+while(num1 <= 50 ){
+    if(num1 % 2 == 0){
+        printf("%d\n", num1);
+    }
+    num1++;
 }
-printf("soma total = %d\n", soma);
+
+// for(int i = 0; i <= 50; i += 2){
+//     printf("%d\n", i);
+// }
 
     return 0;
 }
