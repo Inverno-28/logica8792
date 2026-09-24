@@ -9,15 +9,15 @@ SetConsoleOutputCP(65001);
 
 int n;
 
-printf("num1: ");
+printf("adivinhe o numero de 1 a 30: ");
 scanf("%d", &n);
 
-if (n % 2 == 0){
-    printf("numero par: ");
-}else{
-    printf("numero impar: ");
+while(n != 28){
+    printf("errou: ");
+    scanf("%d", &n);
 }
 
+printf("Acesso permitido!\n");
 
 
     return 0;
