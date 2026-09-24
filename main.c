@@ -3,18 +3,22 @@
 #include <math.h>
 #include <string.h>
 
-void linha(int tamanho){
-    for(int i = 0; i < tamanho; i++){
-        printf("*");
-    }
-    printf("\n");
-}
-
 int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-linha(20000);
+int n;
+
+printf("num1: ");
+scanf("%d", &n);
+
+if (n % 2 == 0){
+    printf("numero par: ");
+}else{
+    printf("numero impar: ");
+}
+
+
 
     return 0;
 }
