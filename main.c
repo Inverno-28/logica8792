@@ -8,21 +8,19 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n,s,resultado;
+int n;
+float valor, soma = 0;
 
-printf("digite um numero: ");
-    resultado = scanf("%d", &n);
+printf("quantos numero deseja digitar: ");
+scanf("%d", &n);
 
-if(resultado != 1){
-    printf("entrada invalida! Por Favor, digite apenas numeros!");
-    return 1;
+for (int i = 0; i < n; i++){
+    printf("digite o numero %d: ", i + 1);
+    scanf("%f",&valor);
+    soma += valor;
 }
 
-    for (int i = 1; i <=10; i++){
-        s = i * n;
-        printf("\n%d x %d = %d",i, n, s);
-    }
-    
+printf("media: %.2f\n", soma / n);
 
     return 0;
 }
