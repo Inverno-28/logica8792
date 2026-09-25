@@ -8,17 +8,21 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n;
-long long fatorial = 1;
+int n,s,resultado;
 
-printf("digite o primeiro numero");
-scanf("%d", &n);
+printf("digite um numero: ");
+    resultado = scanf("%d", &n);
 
-for(int i = 1; i <= n; i++){
-    fatorial *= i;
+if(resultado != 1){
+    printf("entrada invalida! Por Favor, digite apenas numeros!");
+    return 1;
 }
 
-printf("fatorial: %lld\n", fatorial);
+    for (int i = 1; i <=10; i++){
+        s = i * n;
+        printf("\n%d x %d = %d",i, n, s);
+    }
+    
 
     return 0;
 }
