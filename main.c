@@ -8,17 +8,17 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n, soma = 0;
+int n;
+long long fatorial = 1;
 
-printf("digite um numero: ");
-scanf("%d",&n);
+printf("digite o primeiro numero");
+scanf("%d", &n);
 
-for (int i = 1; i <= n; i++){
-   soma += i;
-   //soma = soma + i
+for(int i = 1; i <= n; i++){
+    fatorial *= i;
 }
 
-printf("%d", soma);
+printf("fatorial: %lld\n", fatorial);
 
     return 0;
 }
