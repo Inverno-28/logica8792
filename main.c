@@ -1,31 +1,24 @@
 
 #include <stdio.h>
 #include <windows.h>
-#include <math.h>
-#include <string.h>
 
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n, soma = 0;
+   int n, resto, invertido = 0;
 
-    printf("Digite um numero: ");
+   printf("digite um valor: ");
     scanf("%d", &n);
 
-    for(int i = 1; i < n; i++){
-        if(n % i == 0){
-            soma += i;
-        }
+    while(n != 0){
+        resto = n % 10; // 512 % 10 = 2
+        invertido = invertido * 10 + resto;
+        n /= 10; // (n + n)/10
     }
-
-    if (soma == n){
-        printf("%d é um numero perfeito\n", n);
-    }else{
-        printf("%d não é um numero perfeito\n", n);
-    }
-    
+   
+    printf("numero invertido: %d\n", invertido);
 
 return 0; 
 
