@@ -7,25 +7,22 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n = 1, m;
 
-for (int i = 1; i <= 10; i++){
-
-        for (int i = 1; i <= 10; i++)
-
-            {
-
-                m = n * i;
-                
-            printf("\n%d * %d = %d", n, i, m);
-            
+for (int i = 0; i < 10; i++){
+    for (int j = 0; j < 10; j++){
+        for (int k = 0; k < 10; k++){
+            for (int l = 0; l < 10; l++){
+                printf("\n%d%d%d%d",i,j,k,l);
             }
-
-    printf("\n");
-
-    n = n + 1;
+            printf("\n");
+        }
+       printf("\n"); 
     }
+    printf("\n");
+}
+
+
+
 
 return 0; 
-
 }
