@@ -7,24 +7,22 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int limite;
+int matriz[3][3] = {
+    {1,2,3},
+    {4,5,6,},
+    {7,8,9},
+};
 
-printf("digite o limite: ");
-scanf("%d", &limite);
 
-    for (int n = 0; n <= limite; n++){
-    int soma = 0;
-        for (int i = 1; i < n; i++){
-        if(n % i == 0){
-            soma += i;
-        }
+for (int i = 0; i < 3; i++){
+    for (int j = 0; j < 3; j++){
+            printf("\nelementos da matriz: %d,\n", matriz[i][j]);
+            printf("grade da matriz: %d,%d\n", i,j);
     }
-    
-    if(soma == n & n != 0){
-    printf("%d é um número perfeito\n", n);
-    }
-    
+
 }
+
+
 
 return 0; 
 }
