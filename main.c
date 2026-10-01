@@ -7,19 +7,25 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
+int s = 352;
 int n;
-printf("digite o tamanho do vetor: ");
-scanf("%d", &n);
-int v[n];
-int soma = 0;
-for(int i = 0; i < n; i++){
-    printf("digite o valor %d: ", i + 1); 
-    scanf("%d", &v[i]);
-    soma +=v[i];
-}
-printf("soma: %d\n", soma);
-printf("media: %.2f\n", (float)soma/n);
 
+    printf("\nAdivinhe o numero: \n");
+    scanf("%d", &n);
+
+while (n != s){
+
+    if (n < s){
+        printf("\nNumero Menor!!\n");
+    }else {
+        printf("\nNumero Maior!!\n");
+    }
+
+    printf("\nTente Novamente: \n");
+    scanf("%d", &n);
+}
+
+printf("\nVocê acertou\n");
 
 return 0; 
 }
