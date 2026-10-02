@@ -7,25 +7,26 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int s = 352;
 int n;
 
-    printf("\nAdivinhe o numero: \n");
-    scanf("%d", &n);
+    printf("Digite o Tamanho do Vetor: ");
+        scanf("%d", &n);
 
-while (n != s){
-
-    if (n < s){
-        printf("\nNumero Menor!!\n");
-    }else {
-        printf("\nNumero Maior!!\n");
+    int v[n];
+    for(int i = 0; i < n; i++){
+        printf("Digite o Valor%d: ", i + 1);
+            scanf("%d", &v[i]);
     }
 
-    printf("\nTente Novamente: \n");
-    scanf("%d", &n);
-}
-
-printf("\nVocê acertou\n");
+    int maior = v[0], menor = v[0];
+        for (int i = 1; i < n; i++){
+            if(v[i] > maior) maior = v[i];
+            if(v[i] < menor) menor = v[i]; 
+            
+        }
+        
+    printf("Maior: %d\n", maior);
+    printf("Menor: %d\n", menor);
 
 return 0; 
 }
