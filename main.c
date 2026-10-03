@@ -8,24 +8,24 @@ SetConsoleOutputCP(65001);
 
 int n;
 
-    printf("Digite o Tamanho do Vetor: ");
-        scanf("%d", &n);
+printf("digite o tamanho");
+    scanf("%d", &n);
 
-    int v[n];
+
+int v[n];
+
     for(int i = 0; i < n; i++){
         printf("Digite o Valor%d: ", i + 1);
             scanf("%d", &v[i]);
-    }
-
-    int soma = 0;
-        for (int i = 0; i < n; i++){
-            soma += v[i];
+        if (v[i] < 0){
+            v[i] = 0;
         }
-        
-    float media = (float)soma/n;
-   
-    printf("soma: %d\n", soma);
-    printf("media: %.2f\n", media);
+    }
+    printf("Vetor ajustado: \n");
+        for (int i = 0; i < n; i++){
+            printf("%d", v[i]);
+        }
+printf("\n");
 
 return 0; 
 
