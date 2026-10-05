@@ -1,39 +1,29 @@
 #include <stdio.h>
 #include <windows.h>
+#include <string.h>
 
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n, pos;
+int voto;
 
-printf("digite o tamanho");
-    scanf("%d", &n);
+printf("qual o candidato q vc quer votar: \n manoel 1 \n carla 2 \n bianca 3 \n henrique 4 \n bruno 5 \n");
+    scanf("%d", &voto);
 
-
-int v[n];
-
-    for(int i = 0; i < n; i++){
-        printf("Digite o Valor%d: ", i + 1);
-            scanf("%d", &v[i]);
-    }
-    
-    printf("digite a posição a remover (0 a %d): ", n - 1);
-        scanf("%d", &pos);
-    
-    for (int i = pos; i < n-1; i++){
-        v[1] = v[i+1];
-    }
-    
-n--;
-printf("vetor apos remoção: \n");
-    for (int i = 0; i < n; i++){
-        printf("%d", v[i]);
-    }
-    
-printf("\n");
-
+    if (voto == 1){
+        printf("voce votou em manoel");}
+    else if (voto == 2){
+         printf("voce votou em carla");}
+    else if (voto == 3){
+         printf("voce votou em bianca");}
+    else if (voto == 4){
+         printf("voce votou em henrique");}
+    else if (voto == 5){
+         printf("voce votou em bruno");}    
+    else{
+        printf("candidato invalido");}
 
 return 0; 
 
