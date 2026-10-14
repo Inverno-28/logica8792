@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
 #include <string.h>
+#include <math.h>
 
 int main(){
 
@@ -9,29 +10,29 @@ SetConsoleOutputCP(65001);
 
 int n;
 
-printf("Digite o tamanho dos vetores\n");
+printf("quantos nomes deseja digitar? ");
 scanf("%d", &n);
 
-int a[n], b[n], soma[n];
-
-printf("digite os valores do vetor a:\n");
+char nomes[n][50];
 
 for (int i = 0; i < n; i++){
-    scanf("%d", &a[i]);
+    printf("digite o nome %d: ", i + 1);
+    scanf("%s", nomes[i]);
+}
+for (int i = 0; i < n - 1; i++){
+    for(int j = 0; j < n - 1; j++){
+        if (strcmp(nomes[j], nomes[j + 1]) > 0){
+            char temp[50];
+            strcpy(temp, nomes[j]);
+            strcpy(nomes[j], nomes[j + 1]);
+            strcpy(nomes[j + 1], temp);
+        }
+    }
 }
 
-printf("digite os valores do vetore B:\n");
+printf("nomes em ordem alfabetica:\n");
 for (int i = 0; i < n; i++){
-    scanf("%d", &b[i]);
-
-}
-
-for(int i = 0; i < n; i++){
-    soma[i] = a[i] + b[i];
-}
-printf("vetor soma\n");
-for (int i = 0; i < n; i++){
-    printf("%d\n", soma[i]);
+    printf("%s\n", nomes[i]);
 }
 
 
