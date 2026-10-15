@@ -3,38 +3,24 @@
 #include <string.h>
 #include <math.h>
 
+struct pessoa{
+    char nome[50];
+    int idade;
+    float altura;
+};
+
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n;
+struct pessoa p1 = {"eduardo",39, 1.70};
+struct pessoa p2 = {"clara",30, 1.65};
+struct pessoa p3 = {"joana",40, 1.80};
 
-printf("quantos nomes deseja digitar? ");
-scanf("%d", &n);
-
-char nomes[n][50];
-
-for (int i = 0; i < n; i++){
-    printf("digite o nome %d: ", i + 1);
-    scanf("%s", nomes[i]);
-}
-for (int i = 0; i < n - 1; i++){
-    for(int j = 0; j < n - 1; j++){
-        if (strcmp(nomes[j], nomes[j + 1]) > 0){
-            char temp[50];
-            strcpy(temp, nomes[j]);
-            strcpy(nomes[j], nomes[j + 1]);
-            strcpy(nomes[j + 1], temp);
-        }
-    }
-}
-
-printf("nomes em ordem alfabetica:\n");
-for (int i = 0; i < n; i++){
-    printf("%s\n", nomes[i]);
-}
-
+printf("nome: %s | idade: %d | altura: %.2f\n", p1.nome, p1.idade, p1.altura);
+printf("nome: %s | idade: %d | altura: %.2f\n", p2.nome, p2.idade, p2.altura);
+printf("nome: %s | idade: %d | altura: %.2f\n", p3.nome, p3.idade, p3.altura);
 
 return 0; 
 
