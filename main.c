@@ -7,6 +7,7 @@ struct pessoa{
     char nome[50];
     int idade;
     float altura;
+    float peso;
 };
 
 int main(){
@@ -14,13 +15,22 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-struct pessoa p1 = {"eduardo",39, 1.70};
-struct pessoa p2 = {"clara",30, 1.65};
-struct pessoa p3 = {"joana",40, 1.80};
+printf("--- Bem-Vindo a academia Gym Tech ---");
+printf("\n");
 
-printf("nome: %s | idade: %d | altura: %.2f\n", p1.nome, p1.idade, p1.altura);
-printf("nome: %s | idade: %d | altura: %.2f\n", p2.nome, p2.idade, p2.altura);
-printf("nome: %s | idade: %d | altura: %.2f\n", p3.nome, p3.idade, p3.altura);
+struct pessoa p1;
+    printf("Digete o nome: ");
+        scanf("%s", p1.nome);
+    printf("Digite sua idade: ");
+        scanf("%d", &p1.idade);
+    printf("Digite a altura: ");
+        scanf("%f", &p1.altura);
+    printf("Digite o peso: ");
+        scanf("%f", &p1.peso);
+    
+    printf("--- Dados Do Cadastro ---\n");
+        printf("nome: %s\nidade: %d\naltura: %.2f\npeso: %.2f", p1.nome, p1.idade, p1.altura, p1.peso);
+
 
 return 0; 
 
