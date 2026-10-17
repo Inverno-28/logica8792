@@ -9,17 +9,22 @@ SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
 int n;
-int soma, resultado;
+int soma;
 
-printf("Digite um valor: ");
+printf("Ate quais taboadas vc que: ");
     scanf("%d", &n);
 
     for (int i = 1; i <= n; i++){
-        soma += i;
-        soma -+ 1; 
-        printf("\n%d + %d = %d ", soma, i, soma + i);
+        printf("\n");
+        
+        for(int j = 0; j <= 10; j++){
+            soma = i * j;
+            if (soma != 0){
+                printf("\n%d * %d = %d", i, j, soma);
+            
+        }
     }
-    
+}
 
 return 0; 
 
