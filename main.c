@@ -8,11 +8,9 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n = 10;
-
-while (n >= 1){
-    printf("%d\n", n);
-       n--;
+int portaAberta = 0;
+if (!portaAberta){
+    printf("A porta esta fechada\n");
 }
 
 
