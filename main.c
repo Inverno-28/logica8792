@@ -8,11 +8,13 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-char p[50] = "Programar";
+int n = 10;
 
-for(int i; i < 3; i++){
-    printf ("%d - %s\n", i + 1, p);
+while (n >= 1){
+    printf("%d\n", n);
+       n--;
 }
+
 
 
 return 0; 
