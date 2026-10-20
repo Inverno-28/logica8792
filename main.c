@@ -8,21 +8,17 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int numero, pares = 0;
+int senha = 1234;
+int tentativas;
 
-    printf("Digite numeros para soma, zero para: ");
-        scanf("%d", &numero);
-while(numero != 0){
-    if(numero % 2 == 0){
-    pares++;
-    }
-
-     printf("Digite numeros para soma, zero para: ");
-        scanf("%d", &numero);
-
+printf("Digite a senha: ");
+scanf("%d", &tentativas);
+while(tentativas != senha){
+    printf("senha incorreta tente novamente: ");
+    scanf("%d", &tentativas);
 }
 
-printf("quantidade de pares %d", pares);
+printf("Acesso liberado\n");
 
 return 0; 
 
