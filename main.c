@@ -8,12 +8,13 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-float nota;
+int resposta;
 do{
-    printf("Digite uma nota (0 a 10): ");
-    scanf("%f", &nota);
-}while(nota < 0 || nota > 10);
-    printf("nota valida: %.1f\n", nota);
+    printf("executando o programa..\n");
+    printf("deseja continuar (1 - sim / 0 - não): ");
+    scanf("%d", &resposta);
+}while(resposta == 1);
+printf("programa encerrado\n");
 
 return 0; 
 
