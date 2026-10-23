@@ -10,30 +10,31 @@ SetConsoleOutputCP(65001);
 
 int opcao;
 
-do{
-    printf("\n--- MENU ---\n");
-    printf("1 - Dizer Ola\n");
-    printf("2 - Dizer Tchau\n");
-    printf("0 - Sair\n");
-    printf("Escolha: ");
+printf("Digite um numero: \n");
     scanf("%d", &opcao);
-    if (opcao == 1){
 
-        printf("Ola\n");
+switch (opcao){
+case 1:
+    printf("Um");
+    break;
 
-    }else if (opcao == 2){
+case 2:
+    printf("Dois");
+    break;
 
-        printf("tchau\n");
+case 3:
+    printf("tres");
+    break;
 
-    }else if (opcao != 0){
-    
-    printf("Opação Invalida\n");
-    }
+case 4:
+    printf("quatro");
+    break;
 
-}while(opcao != 0);
+default:
+    printf("Opção Invalida/Nao disponivel");
+    break;
+}
 
-printf("ate mais\n");
-    
 return 0; 
 
 }
