@@ -8,14 +8,32 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int resposta;
-do{
-    printf("executando o programa..\n");
-    printf("deseja continuar (1 - sim / 0 - não): ");
-    scanf("%d", &resposta);
-}while(resposta == 1);
-printf("programa encerrado\n");
+int opcao;
 
+do{
+    printf("\n--- MENU ---\n");
+    printf("1 - Dizer Ola\n");
+    printf("2 - Dizer Tchau\n");
+    printf("0 - Sair\n");
+    printf("Escolha: ");
+    scanf("%d", &opcao);
+    if (opcao == 1){
+
+        printf("Ola\n");
+
+    }else if (opcao == 2){
+
+        printf("tchau\n");
+
+    }else if (opcao != 0){
+    
+    printf("Opação Invalida\n");
+    }
+
+}while(opcao != 0);
+
+printf("ate mais\n");
+    
 return 0; 
 
 }
