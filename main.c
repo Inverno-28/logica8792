@@ -10,49 +10,19 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-const int dias = 7; 
-float temp[dias];
-float soma = 0, media;
-float maior, menor;
-int diaMaior = 1, diaMenor = 1;
-int acimaMedia = 0;
-
-for (int i = 0; i < dias; i++){
-    printf("temperatura do dia %d: ",i + 1);
-    scanf("%f", &temp[i]);
-    soma += temp[i];
+const int alunos = 5; 
+float notas[alunos];
+float soma = 0;
+for (int i = 0; i < alunos; i++){
+    printf("notas do aluno %d: ", i + 1);
+    scanf("%f", &notas[i]);
+    soma += notas[i];
 }
-media = soma / dias;
-maior = temp[0];
-menor = temp[0];
-
-    for (int i = 0; i < dias; i++){
-        if(temp[i] > maior){
-            maior = temp[i];
-            diaMaior = i + 1;
-        }
-        if (temp[i] < menor){
-            menor = temp[i];
-            diaMenor = i + 1;
-        }
-    }
-    
-for (int i = 0; i < dias; i++){
-    if (temp[i] > media){
-        acimaMedia++;
-    }
-    
+printf("\n--- NOTAS ---\n");
+for (int i = 0; i < alunos; i++){
+    printf("Alunos %d: %.1f\n", i + 1, notas[i]);
 }
-
-printf("\n---TEMPERATURAS---\n");
-    for (int i = 0; i < dias; i++){
-        printf("Dia %d: %.1f\n", i + 1, temp[i]);
-    }
-    printf("\nMedia Da Semana: %.1f\n", media);
-    printf("maior %.1f (dia %d)\n", maior, diaMaior);
-    printf("menor %.1f (dia %d)\n", menor, diaMenor);
-    printf("dias acima da media %d\n", acimaMedia);
-
+printf("\nMedia da turma: %.1f", soma / alunos);
 
 return 0; 
 
