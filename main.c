@@ -5,102 +5,53 @@
 
 #define QTD 5
 
-void cadastro(float notas[]){
-    for (int i = 0; i < QTD; i++){
-        printf("Digite a nota do aluno %d", i + 1);
-        scanf("%d", &notas[i]);
-
-    }
-
-}
-
-void mostrar(float notas[]){
-    for (int i = 0; i < QTD; i++){
-        printf("Aluno %d: %.1f\n", i + 1, notas[i]);
-
-    }
-
-}
-
-float calcularMedia(float notas[]){
-    float soma = 0;
-    for(int i = 0; i < QTD; i++){
-        soma += notas[i];
-    }
-    return soma / QTD;
-
-}
-float maiorNota(float notas[]){
-    float maior = notas[0];
-    for (int i = 0; i < QTD; i++){
-        if (notas[i] > maior){
-            maior = notas[i];
-        }
-        
-    }
-  
-    return maior;
-
-}
-
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-float notas[QTD];
-int opcao;
-int cadastrado = 0;
+const int dias = 7; 
+float temp[dias];
+float soma = 0, media;
+float maior, menor;
+int diaMaior = 1, diaMenor = 1;
+int acimaMedia = 0;
 
-do{
-    printf("\n---CONTROLE DE NOTAS---\n");
-    printf("1 - Cadastrar notas\n");
-    printf("2 - Mostrar notas\n");
-    printf("3 - media da turma\n");
-    printf("4 - maior nota \n");
-    printf("0 - sair\n");
-    printf("escolha");
-    scanf("%d", &opcao);
+for (int i = 0; i < dias; i++){
+    printf("temperatura do dia %d: ",i + 1);
+    scanf("%f", &temp[i]);
+    soma += temp[i];
+}
+media = soma / dias;
+maior = temp[0];
+menor = temp[0];
 
-switch (opcao){
-case 1:
-    cadastro(notas);
-    cadastrado = 1;
-    break;
-
-case 2:
-    if (cadastrado){
-        mostrar(notas);
-    }else{
-        printf("Nenhuma nota cadastrada");
-    }
-    break;
-
-case 3:
-    if (cadastro){
-        printf("media da turma: %.2f\n", calcularMedia(notas));
-    }else{
-    printf("nenhuma nota cadastrada\n");
+    for (int i = 0; i < dias; i++){
+        if(temp[i] > maior){
+            maior = temp[i];
+            diaMaior = i + 1;
+        }
+        if (temp[i] < menor){
+            menor = temp[i];
+            diaMenor = i + 1;
+        }
     }
     
-case 4:
-    if (cadastrado){
-        printf("Maior Nota: %.1f\n", maiorNota(notas));
-    }else{
-        printf("nenhuma nota cadastrada");
+for (int i = 0; i < dias; i++){
+    if (temp[i] > media){
+        acimaMedia++;
     }
     
-case 0:
-    printf("ate mais\n");
-    break;
+}
 
-default:
-    printf("opção invalida:");
-    break;
-
+printf("\n---TEMPERATURAS---\n");
+    for (int i = 0; i < dias; i++){
+        printf("Dia %d: %.1f\n", i + 1, temp[i]);
     }
-
-}while (opcao != 0);
+    printf("\nMedia Da Semana: %.1f\n", media);
+    printf("maior %.1f (dia %d)\n", maior, diaMaior);
+    printf("menor %.1f (dia %d)\n", menor, diaMenor);
+    printf("dias acima da media %d\n", acimaMedia);
 
 
 return 0; 
