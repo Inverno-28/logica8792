@@ -10,29 +10,19 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-const int lancamentos = 10;
-int dados[lancamentos];
-int soma = 0;
-int seis = 0;
+const int QTD = 5;
+int numero[QTD];
 
 srand(time(NULL));
 
-for (int i = 0; i < lancamentos; i++){
-    dados[i] = rand() % 6 + 1;
-    soma += dados[i];
-    
-    if(dados[i] == 6){
-        seis++;
-    }
-    
+for (int i = 0; i < QTD; i++){
+    numero[i] = rand() % 10 + 1;
+}
+printf("numero sorteados: \n");
+for (int i = 0; i < QTD; i++){
+    printf("%d\n", numero[i]);
 }
 
-printf("resultados dos lançamentos:\n");
-    for (int i = 0; i < lancamentos; i++){
-        printf("lançamentos %d: %d\n", i + 1, dados[i]);
-    }
-    printf("\nsoma: %d\n", soma);
-    printf("quantidades de vzs que saiu 6: %d\n", seis);
 
 return 0; 
 
