@@ -11,7 +11,7 @@ SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
 const int lancamentos = 10;
-int dados[lacamentos];
+int dados[lancamentos];
 int soma = 0;
 int seis = 0;
 
