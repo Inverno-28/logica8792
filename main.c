@@ -2,27 +2,37 @@
 #include <windows.h>
 #include <string.h>
 #include <math.h>
-
-#define QTD 5
+#include <time.h>
+#include <stdlib.h>
 
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-const int alunos = 5; 
-float notas[alunos];
-float soma = 0;
-for (int i = 0; i < alunos; i++){
-    printf("notas do aluno %d: ", i + 1);
-    scanf("%f", &notas[i]);
-    soma += notas[i];
+const int lancamentos = 10;
+int dados[lacamentos];
+int soma = 0;
+int seis = 0;
+
+srand(time(NULL));
+
+for (int i = 0; i < lancamentos; i++){
+    dados[i] = rand() % 6 + 1;
+    soma += dados[i];
+    
+    if(dados[i] == 6){
+        seis++;
+    }
+    
 }
-printf("\n--- NOTAS ---\n");
-for (int i = 0; i < alunos; i++){
-    printf("Alunos %d: %.1f\n", i + 1, notas[i]);
-}
-printf("\nMedia da turma: %.1f", soma / alunos);
+
+printf("resultados dos lançamentos:\n");
+    for (int i = 0; i < lancamentos; i++){
+        printf("lançamentos %d: %d\n", i + 1, dados[i]);
+    }
+    printf("\nsoma: %d\n", soma);
+    printf("quantidades de vzs que saiu 6: %d\n", seis);
 
 return 0; 
 
