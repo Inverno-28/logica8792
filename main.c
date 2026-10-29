@@ -5,12 +5,11 @@
 #include <time.h>
 #include <stdlib.h>
 
-// void somar(int a, int b){
-//     printf("Soma = %d\n", a + b);
-// }
-
-int soma(int x, int y){
-    return x + y;
+void calcularNum(int num1, int num2{
+    printf("digite o valor de num 1:");
+    scanf("%d", num1);
+    printf("Digite o valor de num 2:");
+    scanf("%d", num2);
 }
 
 int main(){
@@ -18,10 +17,8 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-// somar(5, 2);
-
 int resultado = soma(8, 2);
-    printf("O resultado é %d: ", resultado);
+printf("o resultado é %d", resultado);
 
 return 0; 
 
