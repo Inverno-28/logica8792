@@ -5,21 +5,23 @@
 #include <time.h>
 #include <stdlib.h>
 
-void linha(int n){
-    for(int i = 0; i < n; i++){
-            printf("-");
-        printf("\n");
-    }
-}
-
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-linha(30);
-printf("Bem-Vindo ao sistema\n");
-linha(30);
+int vet[10];
+    for (int i = 0; i < 10; i++){
+        printf("Valor %d: ", i + 1);
+        scanf("%d", &vet[i]);
+    }
+    
+    printf("\nVelotr: ");
+        for (int i = 0; i < 10; i++){
+            printf("%d", vet[i]);
+        printf("\n");
+        }
+        
 
 return 0; 
 
