@@ -1,48 +1,28 @@
-
 #include <stdio.h>
 #include <windows.h>
-#include <math.h>
 #include <string.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+
+void bemVindo(char nome[], char sobrenome[]){
+    printf("\nBem vindo: %s %s", nome , sobrenome);
+}
 
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int v = 1000;
-int o = -1;
-int s;
-int d;
+char n[50], s[50];
 
-while (o != 0){
-  printf("Escolha Uma Opção: \n");
-    printf("Consultar saldo: 1\n");
-    printf("Sacar: 2\n");
-    printf("Depositar: 3\n");
-    printf("sair: 0\n");
-    scanf("%d", &o);
+printf("Digite seu nome: \n");
+    scanf("%s", n);
+printf("Digite seu sobrenome: \n");
+    scanf("%s", s);
 
-    switch(o){
-    case 1: printf("%d\n", v); break;
+bemVindo(n,s);
 
-    case 2: printf("quanto você deseja sacar?\n");
-                scanf("%d", &s);
-            v -= s;
-            break;
-
-    case 3: printf("quanto você deseja depositar?\n");
-                scanf("%d", &d);
-            v += d;
-            break;
-
-
-    case 0: printf("saindo..\n");
-        break;
-
-    default: printf("opção invalida\n"); break;
-    }
-}
-    return 0;
+return 0; 
 
 }
-

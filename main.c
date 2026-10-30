@@ -5,8 +5,11 @@
 #include <time.h>
 #include <stdlib.h>
 
-void bemVindo(){
-    printf("Bem-vindo");
+void linha(int n){
+    for(int i = 0; i < n; i++){
+            printf("-");
+        printf("\n");
+    }
 }
 
 int main(){
@@ -14,7 +17,9 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-bemVindo();
+linha(30);
+printf("Bem-Vindo ao sistema\n");
+linha(30);
 
 return 0; 
 
