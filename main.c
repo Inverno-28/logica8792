@@ -10,38 +10,32 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int a[2][2], b[2][2], soma[2][2];
-    printf("Matriz A:\n");
+int m[2][3] = {
+    {1,2,3},
+    {4,5,6}
+};
 
+int t [3][2];
 for (int i = 0; i < 2; i++){
-    for (int j = 0; j < 2; j++){
-        printf("A[%d][%d]: ", i,j);
-        scanf("%d", &a[i][j]);
-    }
-}
-
-printf("Matriz B: \n");
-    for (int i = 0; i < 2; i++){
-        for (int j = 0; j < 2; j++){
-            printf("B[%d][%d]: ", i, j);
-            scanf("%d", &b[i][j]);
-        }
-        
+    for (int j = 0; j < 3; j++){
+        t[j][i] = m[i][j];
     }
     
-    for (int i = 0; i < 2; i++){
-        for (int j = 0; j < 2; j++){
-            soma[i][j] = a[i][j] + b[i][j];
+}
 
-        }
-    }
-
-    printf("\nA + B: \n");
+printf("Original (2x3)\n");
     for (int i = 0; i < 2; i++){
-        for (int j = 0; j < 2; j++){
-            printf("%d ", soma[i][j]);
+        for (int j = 0; j < 3; j++){
+            printf("%d ", m[i][j]);
         }
     printf("\n");
+    }
+printf("\nTransposta (3x2): \n");
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 2; j++){
+            printf("%d", t[i][j]);
+        }
+        printf("\n");
     }
     
 
