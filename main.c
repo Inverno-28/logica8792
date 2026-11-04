@@ -9,19 +9,20 @@ int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
-  
-int a[3][3] = {
-    {1,2,3},
-    {4,5,6},
-    {7,8,9}
-};
 
-for (int i = 0; i < 3; i++){
-    for (int j = 0; j < 3; j++){
-        printf("%d\n", a[i][j]);
+char texto[100];
+int tamanho = 0;
+
+printf("Digite uma frase: ");
+    fgets(texto, 100, stdin);
+
+texto[strcspn(texto, "\n")] = '\0';
+
+    while (texto[tamanho] != '\0'){
+        tamanho++;
     }
     
-}
+printf("quantidade de caracteres: %d\n", tamanho);
 
 
 return 0; 
