@@ -5,34 +5,29 @@
 #include <time.h>
 #include <stdlib.h>
 
-void mostraVetor(int v[], int n){
-    for (int i = 0; i < n; i++){
-        printf("%d", v[i]);
-    }
-printf("\n");
+int ehPar(int n){
+    return n % 2 == 0;
 }
-    void inverterVetor(int v[], int n){
-        for (int i = 0; i < n / 2; i++){
-            int temp = v[i];
-            v[i] = v[n - 1 -i];
-            v[n - 1 - i] = temp;
-        }
-    }
-
 
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int numero[5] = {1,2,3,4,5};
+int quantidade = 0;
+int soma = 0;
 
-printf("antes: ");
-    mostraVetor(numero, 5);
-    inverterVetor(numero, 5);
+printf("Pares de 1 a 20: ");
 
-printf("Depois: ");
-    mostraVetor(numero, 5);
+for (int i = 0; i <= 20; i++){
+    if (ehPar){
+        printf("%d ", i);
+        quantidade++;
+        soma += i;
+    }
+}
+    printf("\nQuantidade: %d\n", quantidade);
+    printf("soma: %d\n", soma);
 
 return 0; 
 
