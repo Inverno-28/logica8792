@@ -5,25 +5,34 @@
 #include <time.h>
 #include <stdlib.h>
 
+void mostraVetor(int v[], int n){
+    for (int i = 0; i < n; i++){
+        printf("%d", v[i]);
+    }
+printf("\n");
+}
+    void inverterVetor(int v[], int n){
+        for (int i = 0; i < n / 2; i++){
+            int temp = v[i];
+            v[i] = v[n - 1 -i];
+            v[n - 1 - i] = temp;
+        }
+    }
+
+
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-char texto[100];
-int tamanho = 0;
+int numero[5] = {1,2,3,4,5};
 
-printf("Digite uma frase: ");
-    fgets(texto, 100, stdin);
+printf("antes: ");
+    mostraVetor(numero, 5);
+    inverterVetor(numero, 5);
 
-texto[strcspn(texto, "\n")] = '\0';
-
-    while (texto[tamanho] != '\0'){
-        tamanho++;
-    }
-    
-printf("quantidade de caracteres: %d\n", tamanho);
-
+printf("Depois: ");
+    mostraVetor(numero, 5);
 
 return 0; 
 
