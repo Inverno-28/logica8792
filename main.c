@@ -5,16 +5,13 @@
 #include <time.h>
 #include <stdlib.h>
 
-float lerPositivo(char mensagem[]){
-    float valor;
-do{
-    printf("%s", mensagem);
-        scanf("%f", &valor);
-    if (valor <= 0){
-        printf("Valor invalido Digite um numero maior que 0\n");
+void contagem(int n){
+    if (n == 0){
+        printf("fogo");    
+        return;
     }
-} while (valor <= 0);
-return valor;
+    printf("%d\n", n);
+    contagem(n-1);
 }
 
 int main(){
@@ -22,12 +19,7 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-float idade = lerPositivo("digite a idade");
-float peso = lerPositivo("digite o peso (kg)");
-float altura = lerPositivo("digite altura (m)");
-
-printf("\nidade: %.0f anos\n", idade);
-printf("imc %f", peso/ (altura * altura));
+contagem(5);
 
 return 0; 
 
