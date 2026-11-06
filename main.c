@@ -5,13 +5,11 @@
 #include <time.h>
 #include <stdlib.h>
 
-void contagem(int n){
-    if (n == 0){
-        printf("fogo");    
-        return;
+int fatorial(int numero){
+    if(numero == 0 || numero == 1){
+        return 1;
     }
-    printf("%d\n", n);
-    contagem(n-1);
+    return numero * fatorial(numero - 1);
 }
 
 int main(){
@@ -19,8 +17,10 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-contagem(5);
+int resultado = fatorial(5);
 
-return 0; 
+    printf("fatorial: %d\n", resultado);
+
+return 0;
 
 }
