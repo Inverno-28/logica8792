@@ -10,10 +10,11 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-for (int i = 1; i <= 1000; i++){
-    if(i % 7 == 0 && i % 2 != 0){
-    printf("%d\n", i);
+for (int i = 2000; i < 2030; i++){
+    if (i % 4 == 0){
+        printf("%d\n", i);
     }
+    
 }
 
 
